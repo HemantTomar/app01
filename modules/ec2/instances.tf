@@ -8,7 +8,7 @@ resource "aws_instance" "webservers" {
 	subnet_id = "${element(aws_subnet.public.*.id,count.index)}"
 	#user_data = "${file("install_httpd.sh")}"
 
-	tags {
+	tags = {
 	  Name = "Server-${count.index}"
 	}
 }
