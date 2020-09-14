@@ -1,11 +1,10 @@
-variable "ec2_count" {
-  default = "1"
+
+variable "webservers_ami" {
+ 
 }
 
-variable "ami_id" {}
-
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t2.nano"
 }
 
 variable "subnet_id" {}
