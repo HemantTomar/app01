@@ -5,7 +5,7 @@ resource "aws_subnet" "public" {
   cidr_block = "${element(var.subnets_cidr,count.index)}"
   availability_zone = "${element(var.azs,count.index)}"
   map_public_ip_on_launch = true
-  tags {
+  tags= {
     Name = "Subnet-${count.index+1}"
   }
 }
